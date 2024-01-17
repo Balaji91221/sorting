@@ -1,0 +1,85 @@
+/* ContactForm.css */
+
+/* Overall container style */
+div {
+  text-align: center;
+}
+
+/* Title styles */
+h2 {
+  font-family: "Permanent Marker";
+  margin-bottom: 10px;
+}
+
+.underline {
+  height: 0.25rem;
+  width: 75%;
+  min-width: 3rem;
+  border-radius: 0.25rem;
+  background: #000; /* Adjust color as needed */
+  margin: 0 auto 1.5rem auto;
+  transition: background 0.3s ease; /* Add transition for a smooth effect */
+}
+
+.underline:hover {
+  background: #33d6a2;
+  width: 50%;
+}
+
+/* Form styles */
+Form {
+  max-width: 400px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+/* Form input styles */
+Form.Control {
+  margin-bottom: 10px;
+}
+
+/* Submit button styles */
+.my-3 {
+  margin-top: 20px; /* Adjust margin-top for spacing */
+}
+
+/* Success alert styles */
+.mx-auto {
+  max-width: 400px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+/* Adjust Alert styles based on your preference */
+.alert {
+  margin-top: 20px; /* Adjust margin-top for spacing */
+}
+
+/* Contact information styles */
+.contact-info {
+  margin-top: 20px; /* Adjust margin-top for spacing */
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-form {
+  max-width: 600px; /* Set a maximum width for the form */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .contact-form {
+    max-width: 100%; /* Make the form full width on smaller screens */
+    padding: 10px;
+  }
+
+  .contact-info {
+    margin-top: 10px;
+  }
+}

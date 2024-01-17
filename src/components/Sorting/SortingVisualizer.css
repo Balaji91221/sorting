@@ -1,0 +1,21 @@
+.array-container {
+  margin: 50px;
+  margin-left: 100px;
+}
+
+button {
+  padding: 10px;
+  margin-right: 10px !important; /* Add a margin to the right for the desired gap */
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #b0f7c7;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease-in-out, color 0.4s ease-in-out;
+}
+
+.array-bar {
+  width: 2px;
+  display: inline-block;
+  margin: 0 1px;
+}

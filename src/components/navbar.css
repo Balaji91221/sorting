@@ -1,0 +1,59 @@
+
+.navbar{
+    background-color: #ccffdd;
+}
+.brand, .list_item{
+    color: #000 !important;
+}
+.brand:hover, .list_item:hover{
+    color: #495359 !important;
+    
+}
+.icon-show{
+    margin: 20px;
+}
+
+.icon-container{
+    display: flex;
+}
+
+.icon-text{
+    padding:20px 10px;
+    margin:auto;
+    text-align: center;
+}
+/* Add responsive styles for mobile */
+@media (max-width: 768px) {
+  .navbar {
+    background-color: #fff; /* Set your background color for mobile */
+  }
+
+  .navbar-brand {
+    color: #333; /* Set your brand text color for mobile */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #333; /* Set your toggle icon color for mobile */
+  }
+
+  .navbar-nav {
+    margin-top: 10px; /* Adjust the top margin for mobile */
+  }
+
+  .nav-link {
+    color: #333; /* Set your navigation link color for mobile */
+    margin: 5px; /* Adjust margin for mobile */
+  }
+}
+
+
+footer{
+    /*position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;*/
+    background-color: #212842;
+    font-weight: bolder;
+    color: #fff;
+}
+
