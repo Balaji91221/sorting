@@ -1,0 +1,11 @@
+.array-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 400px; /* Set the desired height */
+  }
+  
+  .array-bar {
+    margin-right: 2px; /* Adjust spacing between bars */
+  }
+  

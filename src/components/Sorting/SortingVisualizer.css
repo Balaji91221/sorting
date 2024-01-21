@@ -1,6 +1,8 @@
 .array-container {
   margin: 50px;
   margin-left: 100px;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 button {
@@ -15,7 +17,10 @@ button {
 }
 
 .array-bar {
-  width: 2px;
+  width: 15px;
+  border-radius: 10px; /* Applies to all corners initially */
+  border-bottom-left-radius: 0; /* Resets top-left corner */
+  border-bottom-right-radius: 0; /* Resets top-right corner */
   display: inline-block;
-  margin: 0 1px;
+  margin: 0 4px;
 }

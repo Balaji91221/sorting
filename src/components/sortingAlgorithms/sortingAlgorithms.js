@@ -176,7 +176,7 @@ function bubbleSort(array, animations) {
   }
 }
 
-// Helper function to swap elements in an array
+
 function swap(array, i, j) {
   const temp = array[i];
   array[i] = array[j];
