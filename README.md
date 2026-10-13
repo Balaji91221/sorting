@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Sorting Algorithms · React Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Explore sorting routines through animated array bars.**
 
-## Available Scripts
+React · JavaScript · React Router
 
-In the project directory, you can run:
+## Purpose
 
-### `npm start`
+This learning project separates sorting routines from their visual presentation. Algorithms emit animation events, and the interface uses those events to highlight comparisons and update bar heights.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Included interface
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Merge Sort, Quick Sort, Heap Sort, and Bubble Sort controls.
+- Random array generation.
+- Controls for the number of bars and animation timing.
+- Home, sorting, and contact routes.
 
-### `npm test`
+## Run locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Open the source directory with Node.js/npm installed:
 
-### `npm run build`
+```bash
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open [localhost:3000](http://localhost:3000), then navigate to `/sorting`. `npm run build` creates the frontend bundle.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to explore
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Generate a small array, select a sort, and watch the bar colors and heights. Generate a new array before comparing another algorithm. The timing control changes the delay used by the animation scheduler; it is not an algorithm-throughput benchmark.
 
-### `npm run eject`
+## Architecture
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```text
+React Router → SortingVisualizer
+                    ├── array and control state
+                    ├── sortingAlgorithms → animation events
+                    └── timed DOM updates → colored array bars
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Source guide
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [`src/App.js`](src/App.js): page routing and shared navigation.
+- [`SortingVisualizer.jsx`](src/components/Sorting/SortingVisualizer.jsx): controls and rendering.
+- [`sortingAlgorithms.js`](src/components/sortingAlgorithms/sortingAlgorithms.js): algorithm and event generation.
+- [`SortingVisualizer.css`](src/components/Sorting/SortingVisualizer.css): visual presentation.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Current boundaries
 
-## Learn More
+This is an animation prototype. The renderer assumes groups of three events, while some algorithm functions emit different sequences; some visualizations can therefore misrepresent updates. Pending animation timers are not cancelled when another operation starts. These behaviors need refinement before treating the display as a correctness demonstration.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
